@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>声丰祥鲜果</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">声丰祥鲜果</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">账号</a></li>
+                    <li><a href="#">消息</a></li>
+                    <li><a href="#">应用中心</a></li>
+                    <li><a href="#">帮助</a></li>
+                    <li><a href="#">开店向导</a></li>
+                    <li><a href="#">客户服务</a></li>
+                    <li><a href="#">购买咨询</a></li>
+                    <li><a href="#">桌面</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row fix-top-nav">
+            <ul class="nav nav-tabs col-lg-12">
+                <li class=""><a href="#">商品</a></li>
+                <li class=""><a href="#">订单</a></li>
+                <li class=""><a href="#">会员</a></li>
+                <li class=""><a href="#">营销推广</a></li>
+                <li class=""><a href="#">页面管理</a></li>
+                <li class=""><a href="#">统计报表</a></li>
+                <li class=""><a href="#">商店配置</a></li>
+                <li class=""><a href="#">工具箱</a></li>
+                <li class=""><a href="#">浏览商店</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div class="">
+                    <!-- 下拉 -->
+                    <ul class="nav nav-sidebar">
+                        <li class="active"><a href="#">商品管理</a></li>
+                        <li><a href="#">商品列表</a></li>
+                        <li><a href="#">添加商品</a></li>
+                        <li><a href="#">到货通知</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">商品分类管理</a></li>
+                        <li><a href="">分类列表</a></li>
+                        <li><a href="">添加分类</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">前台虚拟分类</a></li>
+                        <li><a href="">虚拟分类列表</a></li>
+                        <li><a href="">添加虚拟分类</a></li>
+                        <li><a href="">导入商品分类</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">商品类型管理</a></li>
+                        <li><a href="">类型列表</a></li>
+                        <li><a href="">添加类型</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">规格管理</a></li>
+                        <li><a href="">规格列表</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">品牌管理</a></li>
+                        <li><a href="">品牌列表</a></li>
+                        <li><a href="">添加品牌</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">商品批量处理</a></li>
+                        <li><a href="">批量上传</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <!-- 下拉2 -->
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">商品分类目录</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">韩版女装</a></li>
+                        <li><a href="">外套</a></li>
+                        <li><a href="">长裙</a></li>
+                        <li><a href="">女裤</a></li>
+                        <li><a href="">未分类商品</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">包包</a></li>
+                        <li><a href="">手提包</a></li>
+                        <li><a href="">皮夹钱包</a></li>
+                        <li><a href="">未分类商品</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">时尚女鞋</a></li>
+                        <li><a href="">气质单鞋</a></li>
+                        <li><a href="">运动休闲</a></li>
+                        <li><a href="">未分类商品</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">未分类商品</a></li>
+                        <li><a href="">未分类商品</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div class="panel panel-default">
+                    <div class="panel-heading">购物设置</div>
+                    <div class="panel-body">
+                        <div class="row form-group">
+                            <div class="col-sm-3">是否支持非会员购物：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">顾客点击商品购买按钮后：</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>不跳转页面，直接加入购物车</option>
+                                    <option>本页跳转到购物车页面</option>
+                                    <option>弹出购物车页面</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">前台商品价格精确到：</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>无小数位</option>
+                                    <option>1位小数</option>
+                                    <option selected>2位小数</option>
+                                    <option>3位小数</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">商品价格进位方式：</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>四舍五入</option>
+                                    <option>向上取整</option>
+                                    <option>向下取整</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">是否设置含税价格：</div>
+                            <div class="col-sm-2">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                说明：启用后顾客将承担订单发票税金
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">税率：</div>
+                            <div class="input-group col-sm-2">
+                                <input type="text" name="" id="" class="form-control">
+                                <span class="input-group-addon">%</span>
+                            </div>
+                            <div class="col-sm-7">
+                                <span>icon</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">默认备货时间：</div>
+                            <div class="input-group col-sm-2">
+                                <input type="text" name="" id="" class="form-control">
+                                <span class="input-group-addon">天</span>
+                            </div>
+                            <div class="col-sm-7">
+                                <span>icon</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">优化商店运营数据：</div>
+                            <div class="col-sm-2">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否</label>
+                                    <label>icon</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">是否支持商品直接购买：</div>
+                            <div class="col-sm-2">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否</label>
+                                    <label>icon</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-9">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否</label>
+                                    <label class="radio-inline">说明：如果支持则前台商品详细页会出现“立即购买”按钮，实现单个商品直接购买</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">会员等级自动调整方式：</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>按积分</option>
+                                    <option>按经验值</option>
+                                </select>
+                                <span>icon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">显示设置</div>
+                    <div class="panel-body">
+                        <div class="row form-group">
+                            <div class="col-sm-3">顾客登陆方式</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>弹出登录窗口</option>
+                                    <option>跳转到登陆页</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">会员注册是否需启用验证码：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否 </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">会员登陆是否需启用验证码：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否 </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">商品列表默认展示方式：</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>图文混排</option>
+                                    <option>橱窗形式</option>
+                                    <option>文字列表</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">商品列表页显示设置：</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>显示该分类及下属子分类下所有商品</option>
+                                    <option>仅显示本分类下商品</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">前台是否显示库存数量：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否 </label>
+                                    <label class="radio-inline">icon</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">前台是否显示市场价：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否 </label>
+                                    <label class="radio-inline">icon</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">如果不输入市场价，则：</div>
+                            <div class="col-sm-4 form-horizonal">
+                                <div class="form-group">
+                                    <label class="col-sm-4">市场价 = 销售价</label>
+                                    <div class="col-sm-8">
+                                        <select class="">
+                                            <option>x</option>
+                                            <option>+</option>
+                                        </select>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">优惠额度显示方式：</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>不显示</option>
+                                    <option selected>显示节省的金额</option>
+                                    <option>显示百分比</option>
+                                    <option>显示折扣</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">零售会员可见价格设定：</div>
+                            <div class="col-sm-9">
+                                <select>
+                                    <option>显示当前会员等级价格</option>
+                                    <option>显示零售会员所有等级价格</option>
+                                    <option>显示批发会员所有等级价格</option>
+                                    <option>显示所有会员等级价格</option>
+                                </select>
+                                <span>本设置作用于商品详细页</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                        <div class="col-sm-3">批发会员可见价格设定：：</div>
+                            <div class="col-sm-9">
+                                <select>
+                                    <option>显示当前会员等级价格</option>
+                                    <option>显示零售会员所有等级价格</option>
+                                    <option>显示批发会员所有等级价格</option>
+                                    <option>显示所有会员等级价格</option>
+                                </select>
+                                <span>本设置作用于商品详细页</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">前台是否显示销售记录：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否 </label>
+                                    <label class="radio-inline">icon</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">是否启用商品编号：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否 </label>
+                                    <label class="radio-inline">icon</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">是否启用商品货位：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否 </label>
+                                    <label class="radio-inline">icon</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">商品详细页启用属性链接：</div>
+                            <div class="col-sm-4">
+                                <div class="radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="" id="" value="">否 </label>
+                                    <label class="radio-inline">icon</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">商品详细页属性显示位置：</div>
+                            <div class="col-sm-4">
+                                <select>
+                                    <option>仅商品价格上方</option>
+                                    <option>仅商品详情中</option>
+                                    <option>两处同时显示</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">每页显示产品数：</div>
+                            <div class="col-sm-1">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-3">橱窗显示每行显示数：</div>
+                            <div class="col-sm-1">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row from-group">
+                            <div class="col-sm-3 col-sm-offset-3">
+                                <button type="button" class="btn btn-success btn-block">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
