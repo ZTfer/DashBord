@@ -14,6 +14,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
@@ -34,37 +38,571 @@
         </div>
     </nav>
     <div class="container-fluid">
-            <div class="col-sm-3 col-md-2 sidebar2">
-                <div class="">
-                    <!-- 下拉 -->
-                    <ul class="nav nav-stacked" role="tablist">
-                        <li role="presentation" class="active"><a href="#" aria-controls="" role="tab" data-toggle="tab">商品总览</a></li>
-                        <li role="presentation"><a href="#" aria-controls="" role="tab" data-toggle="tab">配件</a></li>
-                        <li role="presentation"><a href="#" aria-controls="" role="tab" data-toggle="tab">详细介绍</a></li>
-                        <li role="presentation"><a href="#" aria-controls="" role="tab" data-toggle="tab"></a></li>
-                    </ul>
+        <div class="col-sm-3 col-md-2 sidebar2">
+            <div class="">
+                <!-- 下拉 -->
+                <ul class="nav nav-stacked" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#preview" aria-controls="preview" role="tab" data-toggle="tab">商品总览<i class="fa fa-chevron-right"></i></a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#part" aria-controls="part" role="tab" data-toggle="tab">配件<i class="fa fa-chevron-right"></i></a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#detail" aria-controls="detail" role="tab" data-toggle="tab">详细介绍<i class="fa fa-chevron-right"></i></a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#seo" aria-controls="seo" role="tab" data-toggle="tab">搜索引擎优化<i class="fa fa-chevron-right"></i></a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#relevant" aria-controls="relevant" role="tab" data-toggle="tab">相关商品<i class="fa fa-chevron-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="">
+                <!-- 下拉2 -->
+                <ul id="accordion" class="accordion nav-sidebar">
+                    <li>
+                        <div class="link">商品标签<i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">韩版女装
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">外套
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">长裙
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">女裤
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">未分类商品
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="checkbox">
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-default btn-block">保存</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#newItem">新建</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="preview">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">商品总览</div>
+                        <div class="panel-body">
+                            <div class="col-sm-9">
+                                <div class="row form-group">
+                                    <div class="col-sm-2">所属分类：</div>
+                                    <div class="col-sm-10">
+                                        <select>
+                                            <option>韩版女装</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">所属类型：</div>
+                                    <div class="col-sm-10">
+                                        <select>
+                                            <option>箱包</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">商品名称：</div>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">商品关键词：</div>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        仅用于在前台、后台筛选商品，多个关键词用半角竖线"|"分开&nbsp;
+                                        <a data-toggle="tooltip" data-placement="top" title="点击查看帮助" href="#" class="fa fa-question-circle"></a>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">品牌</div>
+                                    <div class="col-sm-4">
+                                        <select>
+                                            <option>品牌1</option>
+                                            <option>品牌2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">计量单位：</div>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">简介：</div>
+                                    <div class="col-sm-4">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">是否上架销售：</div>
+                                    <div class="col-sm-2">
+                                        <div class="radio">
+                                            <label class="radio-inline">
+                                                <input type="radio">是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio">否
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#upTime">
+                                            <i class="fa fa-clock-o"></i>&nbsp;定时上下架</button>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">销售价</div>
+                                    <div class="col-sm-2">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#memberPrice">
+                                            <i class="fa fa-pencil-square-o"></i>&nbsp;编辑会员价格</button>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">成本价：</div>
+                                    <div class="col-sm-2">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                    <div class="col-sm-4">前台不会显示，仅供后台使用</div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">市场价：</div>
+                                    <div class="col-sm-2">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">货号：</div>
+                                    <div class="col-sm-2">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">重量：</div>
+                                    <div class="col-sm-2">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                    <div class="col-sm-2">克（g）</div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">库存：</div>
+                                    <div class="col-sm-2">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">货位：</div>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-2">规格：</div>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#openSpec">
+                                            <i class="fa fa-plus"></i>&nbsp;开启规格 Modal
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <a data-toggle="tooltip" data-placement="top" title="点击查看帮助" href="#" class="fa fa-question-circle"></a>
+                                        &nbsp;&nbsp;开启规格前先填写以上价格等信息，可自动复制信息到货品
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumbnail">
+                                    <img src="images/img-1.png" class="img-responsive">
+                                    <div class="caption">
+                                        <p>
+                                            <div class="col-sm-6 padding-left0">
+                                                <a href="#" class="upfile">
+                                                    <input type="file" class="btn btn-default">上传图片
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 padding-right0">
+                                                <button type="button" class="btn btn-default btn-block" data-container="body" data-toggle="popover" data-placement="bottom" data-content="注：列表页商品图片默认由系统自动生成.您也可以上传一张商品图片来覆盖默认的." id="learnMore">了解更多</button>
+                                            </div>
+                                        </p>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">配件</div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addPlugs">
+                                <i class="fa fa-plus"></i>&nbsp;添加配件 Modal
+                            </button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">详细介绍</div>
+                        <div class="panel-body">
+                            <p>Text Edit Aera</p>
+                            <p>http://ueditor.baidu.com/website/umeditor.html</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">搜索引擎优化</div>
+                        <div class="panel-body">
+                            <div class="row form-group">
+                                <div class="col-sm-2">商品页面标题：</div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-6">(留空则默认显示商品名称)</div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-2">页面关键词：</div>
+                                <div class="col-sm-4">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="col-sm-6">(留空则默认继承分类或全局设置的KEYWORDS内容)</div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-2">页面描述：</div>
+                                <div class="col-sm-4">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="col-sm-6">(留空则默认继承分类或全局设置的DESCRIPTION内容)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">相关商品</div>
+                        <div class="panel-body">
+                            <select>
+                                <option>请选择</option>
+                                <option>相关商品1</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <div class="">
-                    <!-- 下拉2 -->
-                    <ul class="nav nav-sidebar">
-                        <li><a href="">韩版女装</a></li>
-                        <li><a href="">外套</a></li>
-                        <li><a href="">长裙</a></li>
-                        <li><a href="">女裤</a></li>
-                        <li><a href="">未分类商品</a></li>
-                        <li><a href="">包包</a></li>
-                        <li><a href="">手提包</a></li>
-                        <li><a href="">皮夹钱包</a></li>
-                        <li><a href="">未分类商品</a></li>
-                    </ul>
+                <div role="tabpanel" class="tab-pane" id="part">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">配件</div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addPlugs">
+                                <i class="fa fa-plus"></i>&nbsp;添加配件 Modal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="detail">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">详细介绍</div>
+                        <div class="panel-body">
+                            <p>Text Edit Aera</p>
+                            <p>http://ueditor.baidu.com/website/umeditor.html</p>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="seo">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">搜索引擎优化</div>
+                        <div class="panel-body">
+                            <div class="row form-group">
+                                <div class="col-sm-2">商品页面标题：</div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-6">(留空则默认显示商品名称)</div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-2">页面关键词：</div>
+                                <div class="col-sm-4">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="col-sm-6">(留空则默认继承分类或全局设置的KEYWORDS内容)</div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-2">页面描述：</div>
+                                <div class="col-sm-4">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="col-sm-6">(留空则默认继承分类或全局设置的DESCRIPTION内容)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="relevant">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">搜索引擎优化</div>
+                        <div class="panel-body">
+                            <div class="row form-group">
+                                <div class="col-sm-2">商品页面标题：</div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-6">(留空则默认显示商品名称)</div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-2">页面关键词：</div>
+                                <div class="col-sm-4">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="col-sm-6">(留空则默认继承分类或全局设置的KEYWORDS内容)</div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-2">页面描述：</div>
+                                <div class="col-sm-4">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="col-sm-6">(留空则默认继承分类或全局设置的DESCRIPTION内容)</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <div class="tab-content">
-                    <div role="tabpanel" class="tabpane activ" id=""></div>
-                    <div role="tabpanel" class="tabpane activ" id=""></div>
-                    <div role="tabpanel" class="tabpane activ" id=""></div>
-                    <div role="tabpanel" class="tabpane activ" id=""></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default  navbar-fixed-bottom padding-top7">
+        <div class="container">
+            <div class="col-sm-2 col-sm-offset-1">
+                <button type="button" class="btn btn-success btn-block">保存并关闭窗口</button>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-default btn-block">保存并添加相似商品</button>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-default btn-block">保存当前</button>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-danger btn-block">关闭窗口</button>
+            </div>
+        </div>
+    </nav>
+    <!-- 模态框 上下架 -->
+    <div class="modal fade" id="upTime" tabindex="-1" role="dialog" aria-labelledby="timeTitle">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="timeTitle">定时上下架管理</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">时间选择</div>
+                        <div class="panel-body">
+                            <div class="row form-group">
+                                <div class="col-sm-3">时间选择：</div>
+                                <div class="col-sm-8 padding-top0">
+                                    <div class="form-group padding-top0">
+                                        <div class="input-group date form_datetime padding-top0" data-date="2015-09-06T05:25:07Z" data-date-format="yyyy MM dd - HH:ii" data-link-field="dtp_input1">
+                                            <input class="form-control" size="16" type="text" value="" readonly>
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                                        </div>
+                                        <input type="hidden" id="dtp_input1" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-3">操作类型：</div>
+                                <div class="col-sm-4">
+                                    <div class="radio padding-top0">
+                                        <label class="radio-inline">
+                                            <input type="radio" checked>上架
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio">下架
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-3 col-sm-offset-3">
+                                    <button type="button" class="btn btn-default btn-block">添加新操作</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">添加新操作</div>
+                        <table class="table">
+                            <tr>
+                                <th>执行队列</th>
+                                <th>时间</th>
+                                <th>剩余时间</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td>上架</td>
+                                <td>2015-09-18 09:00:00</td>
+                                <td>12天</td>
+                                <td><i class="fa fa-plus fa-rotate-45"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 模态框 编辑会员价格 memberprice-->
+    <div class="modal fade" id="memberPrice" tabindex="-1" role="dialog" aria-labelledby="priceTitle">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="priceTitle">编辑会员价格</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">编辑会员价格</div>
+                        <table class="table">
+                            <tr>
+                                <th>会员等级</th>
+                                <th>价格</th>
+                                <th>留空默认</th>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2 padding-top14">普通会员</td>
+                                <td class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">&yen;</span>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </td>
+                                <td class="col-sm-2 padding-top14">&yen;0.00</td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2 padding-top14">高级会员</td>
+                                <td class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">&yen;</span>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </td>
+                                <td class="col-sm-2 padding-top14">&yen;0.00</td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2 padding-top14">VIP会员</td>
+                                <td class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">&yen;</span>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </td>
+                                <td class="col-sm-2 padding-top14">&yen;0.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 模态框 开启规格 openSpec -->
+    <div class="modal fade" id="openSpec" tabindex="-1" role="dialog" aria-labelledby="specTitle">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="specTitle">开启规格</h4>
+                </div>
+                <div class="modal-body">
+                    规格
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 模态框 添加配件 addPlugs -->
+    <div class="modal fade" id="addPlugs" tabindex="-1" role="dialog" aria-labelledby="plusTitle">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="plusTitle">添加配件</h4>
+                </div>
+                <div class="modal-body">
+                    配件
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 模态框 新建标签 newItem-->
+    <div class="modal fade" id="newItem" tabindex="-1" role="dialog" aria-labelledyby="itemTitle">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="itemTitle">新建标签</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel">
+                        <div class="panel-heading">请输入一个新的标签名称：</div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success">保存</button>
                 </div>
             </div>
         </div>
@@ -79,6 +617,47 @@
     <script src="js/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/collapse.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('#learnMore').popover();
+        //时间选择
+        $('.form_datetime').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 1
+        });
+        $('.form_date').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('.form_time').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
+    })
+    </script>
 </body>
 
 </html>
