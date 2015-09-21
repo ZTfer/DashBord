@@ -40,3 +40,6 @@ a:focus {text-decoration: none;}
 .upfile:hover{background: #f0f0f0;}
 .upfile input{position: absolute;top: 0;left: 0;opacity: 0;content: ''}
 .fa-rotate-45{transform:rotate(45deg);}
+
+
+.nav-tabs>li>a{border-radius: 0;}

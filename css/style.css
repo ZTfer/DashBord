@@ -102,3 +102,21 @@ a {
     transition: all 0.25s ease;
     margin: 0;
 }
+
+/*输入框*/
+.form-control{-webkit-box-shadow:inset 0 0 0 #fff!important;box-shadow: inset 0 0 0 #fff!important;}
+.signin-body{background: url(../images/background.jpg);}
+.signin-window{background-color: #fff;border-radius: 10px;padding: 30px;}
+.signin-header{font-size: 20px;text-align: center;}
+
+
+
+
+
+
+
+
+
+
+
+
