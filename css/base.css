@@ -6,40 +6,114 @@ body {
     font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
     background: #fff;
 }
+
+
 /*图标*/
+
+
 /*面板*/
-a:hover {text-decoration: none;}
-a:focus {text-decoration: none;}
-.table-no-border{margin-bottom: 0;}
-.table-no-border tbody tr th {border-top: none;}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+.table-no-border {
+    margin-bottom: 0;
+}
+
+.table-no-border tbody tr th {
+    border-top: none;
+}
+
 .table-no-border tbody tr th span {}
+
+
 /*form-group*/
-.form-group div:first-child,.form-group div:last-child{padding-top: 7px;}
-.form-group div:last-child button{margin-top: -5px;}
+
+.form-group div:first-child,
+.form-group div:last-child {
+    padding-top: 7px;
+}
+
+.form-group div:last-child button {
+    margin-top: -5px;
+}
+
+
 /*padding*/
-.padding-top0{padding-top: 0 !important;}
-.padding-top7{padding-top: 7px !important;}
-.padding-top10{padding-top: 10px !important;}
-.padding-top14{padding-top: 14px !important;}
-.padding-left0{padding-left: 0;}
-.padding-right0{padding-right: 0;}
+
+.padding-top0 {
+    padding-top: 0 !important;
+}
+
+.padding-top7 {
+    padding-top: 7px !important;
+}
+
+.padding-top10 {
+    padding-top: 10px !important;
+}
+
+.padding-top14 {
+    padding-top: 14px !important;
+}
+
+.padding-left0 {
+    padding-left: 0;
+}
+
+.padding-right0 {
+    padding-right: 0;
+}
+
+
 /*添加商品页*/
 
-.upfile{
-	position: relative;
-	display: block;
-	padding: 6px 6px;
-	text-align: center;
-	border-radius:4px ;
-	border: 1px solid #ccc;
-	color:#333;
-	font-size: 14px;
-	overflow: hidden;
-	/*width: 50%*/
+.upfile {
+    position: relative;
+    display: block;
+    padding: 6px 6px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 14px;
+    overflow: hidden;
+    /*width: 50%*/
 }
-.upfile:hover{background: #f0f0f0;}
-.upfile input{position: absolute;top: 0;left: 0;opacity: 0;content: ''}
-.fa-rotate-45{transform:rotate(45deg);}
+
+.upfile:hover {
+    background: #f0f0f0;
+}
+
+.upfile input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    content: ''
+}
+
+.fa-rotate-45 {
+    transform: rotate(45deg);
+}
+
+.nav-tabs>li>a {
+    border-radius: 0;
+}
+
+.bg-f9 {
+    background-color: #f9f9f9
+}
+/*技术支持*/
+
+.achina{position: absolute;bottom: 20px;color: #999}
+.achina a{color: #666}
 
 
-.nav-tabs>li>a{border-radius: 0;}
+
+

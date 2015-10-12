@@ -56,12 +56,12 @@
                 <li role="presentation" class=""><a href="#browse" aria-controls="browse" role="tab" data-toggle="tab">浏览商店</a></li>
             </ul>
         </div>
-        <div class="col-sm-3 col-md-2 sidebar tab-content">
+        <div class="col-sm-3 col-md-2 sidebar tab-content achina-box">
             <div role="tabpanel" class="tab-pane active" id="goods">
                 <ul id="accordion" class="accordion nav-sidebar">
                     <li>
                         <div class="link">商品管理<i class="fa fa-chevron-down"></i></div>
-                        <ul class="submenu">
+                        <ul class="submenu btn-group" data-toggle=: "buttons">
                             <li><a href="#">商品列表</a></li>
                             <li><a href="#">添加商品</a></li>
                             <li><a href="#">到货通知</a></li>
@@ -118,6 +118,9 @@
             <div role="tabpanel" class="tab-pane" id="configure"></div>
             <div role="tabpanel" class="tab-pane" id="toolbox"></div>
             <div role="tabpanel" class="tab-pane" id="browse"></div>
+            <div class="achina">
+                技术支持：<a href="http://www.achina.top">中企互联</a>
+            </div>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main-no-padding">
             <div class="jumbotron">
@@ -152,7 +155,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-   <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
@@ -160,6 +163,13 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/collapse.js"></script>
+    <script>
+    $('.submenu').find('li').click(function() {
+        $('.submenu').find('li').removeClass('bg-f9');
+        $(this).addClass('bg-f9');
+        $(this).parent().addClass('open')
+    })
+    </script>
 </body>
 
 </html>
